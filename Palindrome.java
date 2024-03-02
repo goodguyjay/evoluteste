@@ -7,7 +7,16 @@ Utilize o esqueleto a seguir para implementar seu código: public boolean
 isPalindrome(String s) { // Seu código }*/
 
 public class Palindrome {
+
+    public static void main(String[] args) {
+        isPalindrome(null);
+    }
     public static boolean isPalindrome(String s) {
+
+        if (s == null) {
+            throw new IllegalArgumentException("O input não pode ser nulo.");
+        }
+
 
         s = s.toLowerCase();
         s = s.replaceAll("\\s", ""); // Remove espaço em branco na String
